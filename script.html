@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #heading {
+        font-size: x-large;
+      }
+
+      .detail {
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div style="display: flex; align-items: center; gap: 2rem">
+        <p id="heading">Heading</p>
+        <i
+          data-icon="icon"
+          class="fa fa-angle-double-down"
+          aria-hidden="true"
+        ></i>
+      </div>
+      <p data-id="detail" class="detail">More detail as per the heading</p>
+    </div>
+    <script>
+      // const heading = document.getElementById("heading");
+      const heading = document.querySelector("#heading");
+      const detail = document.querySelector('[data-id = "detail"]');
+      const icon = document.querySelector('[data-icon = "icon"]');
+      console.table({ heading });
+      console.log(detail);
+      heading.textContent = "New Heading";
+      const clickHandler = () => {
+        // console.log("heading clicked");
+        detail.classList.toggle("show");
+        icon.classList.toggle("fa-angle-double-up");
+        console.log(detail);
+      }
+      
+      
+      heading.addEventListener("click",clickHandler );
+      icon.addEventListener("click",clickHandler );
+
+
+
+// toggle dropdown on click
+// const heading = document.getElementById("heading");
+
+
+
+    </script>
+    <!-- <div class="container">
+      <details>
+        <summary id="heading">
+          The Heading
+                </summary>
+
+        <p id="detail">More detail as per the heading</p>
+      </details>
+    </div> -->
+  </body>
+</html>
