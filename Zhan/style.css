@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Abyssinica SIL', serif;
+}
+
+header {
+    width: 100%;
+    /* max-width: 800px; */
+    margin: auto;
+    background-image: url("./peoplediscussing.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50vh;
+}
+
+header::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: dodgerblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 70%;
+}
+
+nav {
+    height: 50px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    justify-content: space-between;
+    color: white;
+}
+
+.logos {
+    display: flex;
+    gap: 1rem;
+}
+
+/* .navigation{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+} */
+
+nav ul {
+    z-index: 1;
+
+    display: flex;
+    /* background-color: rgb(166, 121, 13); */
+    justify-content: space-between;
+    gap: 2rem;
+    /* flex-direction: row; */
+}
+nav ul li a{
+    color: white;
+}
+.context {
+    width: 60%;
+    height: 30vh;
+    margin: auto;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    text-align: center;
+    gap: 2rem;
+    color: white;
+}
+.context h1{
+    font-style: italic;
+}
+.context h2{
+    font-size: medium;
+    text-transform: uppercase;
+}
+.context h1, .buttons,nav ul, .logos, nav h2, .context h2{
+    z-index: 1;
+}
+/* .context h1 {
+    text-align: center;
+    color: aliceblue;
+} */
+
+.buttons {
+    width: 50%;
+    margin: auto;
+    /* background-color: aqua; */
+}
+
+button.second {
+    float: right;
+}

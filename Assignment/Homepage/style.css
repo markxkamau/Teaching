@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Abyssinica SIL', serif;
+}
+
+header {
+    width: 100%;
+    margin: auto;
+    background-image: url("./peoplediscussing.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50vh;
+}
+
+
+nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    justify-content: space-between;
+    color: white;
+}
+
+
+nav ul {
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+nav ul li a{
+    color: white;
+}
+.context {
+    width: 60%;
+    height: 30vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    color: white;
+}
+.context h1{
+    font-style: italic;
+}
+.context h2{
+    font-size: medium;
+    text-transform: uppercase;
+}
+.context h1, .buttons,nav ul, .logos, nav h2, .context h2{
+    z-index: 1;
+}
+
+
+.buttons {
+    width: 50%;
+    margin: auto;
+}
+
+button.second {
+    float: right;
+}

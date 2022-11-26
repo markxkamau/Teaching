@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+#topbar {
+    display: flex;
+    line-height: 80px;
+}
+
+#lefttext {
+    font-size: xx-large;
+}
+
+#centertext {
+    margin: 0, auto;
+    position: relative;
+    align-items: center;
+    font-size: x-large;
+    color: rgb(17, 190, 190);
+    padding-left: 50px;
+}
+
+#navigation {
+    width: 100%;
+    background-color: rgb(17, 190, 190);
+    inline-size: auto;
+    line-height: 50px;
+    height: 50px;
+}
+
+#navigation ul {
+    margin-left: 40px;
+    display: flex;
+}
+
+#navigation ul li {
+    padding-right: 30px;
+}
+
+#navigation ul li a {
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: large;
+}
+
+#newgames {
+    /* background-image: url('../Lesson5/Images/Picture1.png'); */
+    padding: 10px;
+}
+
+#newgames p.title {
+    font-size: x-large;
+}
+#newgamestitle{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+}
+
+#newgamestitle p a {
+    color: rgb(17, 190, 190);
+    font-size: medium;
+    /* float: right; */
+}
+
+
+#newgames div.movie {
+    width: 25%;
+}
+
+#newgames div.movie:hover {
+    border-style: ridge;
+    width: 25%;
+}
+
+#newgames div.movie div img {
+    text-align: center;
+    width: 100%;
+}
+
+#gameinfo p.title {
+    text-align: center;
+}
+
+#gameinfo p.type {
+    text-align: center;
+}
+
+#topgames p a {
+    float: right;
+}
