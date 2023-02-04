@@ -37,7 +37,7 @@ class Program
         int result = addNumbers(first, second);
 
         TvProgram tvProgram = new TvProgram();
-        
+
         tvProgram.declareProgram();
 
         // Instantiate from main

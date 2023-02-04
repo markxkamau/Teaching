@@ -3,11 +3,11 @@ Console.WriteLine("Hello, World!");
 
 //How to declare a variable
 int number = 5;
-long longNumber = 1;
-float decimalNumber = 0.1F; // Include suffix F
-decimal largeDecimalNumber = 0.1M; //Include suffix M
-string text = "Hello World";
-bool check = true;
+// long longNumber = 1;
+// float decimalNumber = 0.1F; // Include suffix F
+// decimal largeDecimalNumber = 0.1M; //Include suffix M
+// string text = "Hello World";
+// bool check = true;
 
 
 // Universal variable
@@ -61,11 +61,14 @@ else
 // Loops for, foreach, while
 // for loop
 int length = 5;
-for (int i = 0; i < length; i++)
+for (
+    //local attributes
+    int i = 0; i < length; i++)
 {
     // Console.WriteLine(i);
 }
-
+// global attribute 
+// int i = 0;
 // [1,2,3,4,5,6,7,8]
 int index = 0;
 while (index < 10)
@@ -81,10 +84,10 @@ while (index < 10)
 }
 
 
-int[] collection = {1,1,3,4,65};
+int[] collection = { 1, 1, 3, 4, 65 };
 //foreach
 foreach (var item in collection)
 {
-        Console.WriteLine(item);
+    Console.WriteLine(item);
 
 }
