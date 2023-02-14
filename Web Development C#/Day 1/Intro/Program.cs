@@ -41,21 +41,50 @@ switch (number)
         break;
 }
 
-if (number == 0)
+void checkScores(int scores)
 {
+    char grade = 'E';
+    // Grading conditions
+    // Range (0-39)
+    if (scores >= 0 && scores < 40)
+    {
+        grade = 'E';
 
-}
-else if (number == 1)
-{
+    }
+    // Range (40-49)
+    else if (scores >= 40 && scores < 50)
+    {
+        grade = 'D';
+    }
+    // Range (50-59)
 
-}
-else if (number == 2)
-{
+    else if (scores >= 50 && scores < 60)
+    {
+        grade = 'C';
 
-}
-else
-{
+    }
+    // Range (60-75)
 
+    else if (scores >= 60 && scores < 76)
+    {
+        grade = 'B';
+
+    }
+    // Range (50-59)
+
+    else if (scores >= 76 && scores <= 100)
+    {
+        grade = 'A';
+
+    }
+    else
+    {
+        Console.WriteLine("Error, check input and try again");
+        scores = int.Parse(Console.ReadLine());
+        checkScores(scores);
+
+    }
+    Console.WriteLine("Grade : "+grade);
 }
 
 // Loops for, foreach, while
@@ -91,3 +120,5 @@ foreach (var item in collection)
     Console.WriteLine(item);
 
 }
+
+checkScores(-1);
