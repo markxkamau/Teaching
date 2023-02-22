@@ -1,10 +1,43 @@
 ﻿// Main program 
 class Program
 {
-    Array array = new Array();
-    Lists list = new Lists();
-    // list.addItem("item1");
-    Dictionarys dictionarys = new Dictionarys();
+    public static void Main(string[] args)
+    {
+        Array array = new Array();
+        Lists list = new Lists();
+        // list.addItem("item1");
+        // list.addItem("item2");
+        // list.addItem("item3");
+        // list.addItem("item4");
+        // list.addItem("item2");
+
+        // Console.WriteLine("Before the clear list \n Count: " + list.itemCount());
+
+        // foreach (var item in list.StringList)
+        // {
+        //     Console.WriteLine(item);
+        // }
+        // // list.removeItem("item2");
+        // // list.clearList();
+        // Console.WriteLine("After the clear list");
+
+        // foreach (var item in list.StringList)
+        // {
+        //     Console.WriteLine(item);
+        // }
+
+        // list.addItem("item1");
+        Dictionarys dictionarys = new Dictionarys();
+        dictionarys.decalareictionary();
+        
+        foreach (var item in dictionarys.fullName)
+        {
+        Console.WriteLine(item);
+        }
+        // dictionarys.displayDictionary(dictionarys.fullName);
+    }
+
+
 
 }
 
@@ -102,40 +135,63 @@ class Array
 // Lists
 public class Lists
 {
-    List<string> list = new List<string>();
+    // Where usedstring
+    // Similar to arrays but with no conconsistent size
+    // mainly used as a collection of similar dataset items
+    // Saves a specific memory size in the system
+    // They vary as to the data type being stored
+    public List<string> StringList = new List<string>(); // Occupies more space than the int
     List<int> number = new List<int>();
+
+    // List<float> floats = new ArrayList<>();
+    public List<string> getLitst()
+    {
+        return StringList;
+    }
 
     public void addItem(string item)
     {
-        list.Add(item); // Adds an item at the end of the list
+        StringList.Add(item); // Adds an item at the end of the list
 
     }
     public void clearList()
     {
-        list.Clear(); // Deletes everything from the list
+        StringList.Clear(); // Deletes everything from the list
 
     }
     public void removeItem(string item)
     {
-        list.Remove(item); // Deletes the first instance of the value in the list
+        StringList.Remove(item); // Deletes the first instance of the value in the list
 
     }
-    public void itemCount()
+    public void removeAllInstances(Predicate<string> item)
     {
-        list.Count(); // gets the number of elements in the list
+        StringList.RemoveAll(item);
+    }
+    public String itemCount()
+    {
+        return StringList.Count().ToString(); // gets the number of elements in the list
 
     }
-    // Where usedstring
-    // Similar to arrays but with no con// Dictionaries
-    // inconsistent size
-    // mainly used as a collection of similar dataset items
 
 }
 
 // Dictionaries
 public class Dictionarys
 {
-    Dictionary<string, string> fullName = new Dictionary<string, string>();
+    // JSON/ Hstore<mainly while using the postgres database>
+    // Example Json
+    // {
+    //     ["Title","Data"]
+    // }
+    // Example Hstore
+    // {
+    //     "Title"=>"Data"
+    // }
+
+    public Dictionary<string, string> fullName = new Dictionary<string, string>();
+        public Dictionary<int, string> personList = new Dictionary<int, string>();
+
 
     public void decalareictionary()
     {
@@ -143,9 +199,10 @@ public class Dictionarys
         string LastName = "Doe";
 
         fullName.Add(FirstName, LastName);
+        personList.Add(1,FirstName);
     }
 
-    public void displayDictionary(Dictionary<string,string> d)
+    public void displayDictionary(Dictionary<string, string> d)
     {
         // Where used
         // Mainly used in JSON and hstore objects
