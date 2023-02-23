@@ -80,8 +80,8 @@ void checkScores(int scores)
     else
     {
         Console.WriteLine("Error, check input and try again");
-        scores = int.Parse(Console.ReadLine());
-        checkScores(scores);
+        // scores = int.Parse(Console.ReadLine());
+        // checkScores(scores);
 
     }
     Console.WriteLine("Grade : "+grade);

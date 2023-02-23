@@ -28,13 +28,33 @@ class Program
 
         // list.addItem("item1");
         Dictionarys dictionarys = new Dictionarys();
-        dictionarys.decalareictionary();
-        
-        foreach (var item in dictionarys.fullName)
-        {
-        Console.WriteLine(item);
-        }
+        // dictionarys.decalareictionary();
+
+        // foreach (var item in dictionarys.fullName)
+        // {
+        // Console.WriteLine(item);
+        // }
         // dictionarys.displayDictionary(dictionarys.fullName);
+        Person girl = new Person();
+        girl.id = 1;
+        girl.name = "Mary";
+        girl.gender = Gender.Female;
+        girl.length= 101;
+        Person girl2 = new Person();
+        girl2.id = 2;
+        girl2.name = "Sheila";
+        girl2.gender = Gender.Female;
+
+        Person[] persons = { girl, girl2 };
+        foreach (var item in persons)
+        {
+            if (item.gender == Gender.Female)
+            {
+                Console.WriteLine(item.name + "\t" + item.heightAssigner(item.length) );
+            }
+
+        }
+
     }
 
 
@@ -190,7 +210,7 @@ public class Dictionarys
     // }
 
     public Dictionary<string, string> fullName = new Dictionary<string, string>();
-        public Dictionary<int, string> personList = new Dictionary<int, string>();
+    public Dictionary<int, string> personList = new Dictionary<int, string>();
 
 
     public void decalareictionary()
@@ -199,7 +219,7 @@ public class Dictionarys
         string LastName = "Doe";
 
         fullName.Add(FirstName, LastName);
-        personList.Add(1,FirstName);
+        personList.Add(1, FirstName);
     }
 
     public void displayDictionary(Dictionary<string, string> d)
@@ -214,8 +234,33 @@ public class Dictionarys
 // // Other Collections but to list
 // LinkedList<string> linkedList = new LinkedList<string>();
 
-// // Enumerator
-// public enum Gender
-// {
-//     Male,Female    
-// }
+// Enumerator
+public enum Gender
+{
+    Male, Female
+}
+
+public enum Height
+{
+    Tall, Medium, Short
+}
+
+public class Person
+{
+    public int id { get; set; }
+    public String? name { get; set; }
+    public Gender gender { get; set; }
+    public int length { get; set; }
+    public Height height { get; set; }
+
+    public Height heightAssigner(int length)
+    {
+        if (length >= 100)
+        {
+            return Height.Tall;
+
+        }
+        return Height.Medium;
+    }
+
+}
