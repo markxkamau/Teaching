@@ -1,4 +1,9 @@
 ﻿using System.Data.SqlClient;
+// Add from terminal using 
+// dotnet add package System.Data.SqlClient
+// Method 2 
+// nuget packages
+// find the package and install System.Data.SqlClient
 
 class Program
 {
