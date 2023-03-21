@@ -7,10 +7,9 @@
 
 class Program
 {
-    SqlConnection connection = new SqlConnection("Host=localhost; Database=Banking_Sys; Username=root; Password=password;");
-    // Find in file.txt created on ur end
-    public void getConnection()
+    public static void Main(string[] args)
     {
+        SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;");    // Find in file.txt created on ur end
         if (connection.ConnectionString != null)
         {
             Console.WriteLine("Connection to db successfull");
@@ -21,13 +20,16 @@ class Program
             Console.WriteLine("Connection to db unsuccessfull");
 
         }
-        // SqlCommand command = new SqlCommand("SELECT * FROM myTable", connection);
-        // SqlDataReader reader = command.ExecuteReader();
-        // while (reader.Read())
-        // {
-        //     Console.WriteLine(reader.GetString(0));
-        // }
-        // reader.Close();
-        // connection.Close();
     }
+
+
+    // SqlCommand command = new SqlCommand("SELECT * FROM myTable", connection);
+    // SqlDataReader reader = command.ExecuteReader();
+    // while (reader.Read())
+    // {
+    //     Console.WriteLine(reader.GetString(0));
+    // }
+    // reader.Close();
+    // connection.Close();
+
 }
