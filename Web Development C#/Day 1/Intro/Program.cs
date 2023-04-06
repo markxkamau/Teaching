@@ -21,6 +21,11 @@ Console.WriteLine(Universal2.GetType());
 //Conditions if, else and switch
 if (true || false)
 {
+    // >= -- Greater than or equal to
+    // <= -- Less than or equal to
+    // <> -- not equal to
+    // == -- equal to   (mainly used gor strings)
+    // = -- equal to
 
 }
 //Number is the variable coming in 
@@ -84,10 +89,10 @@ void checkScores(int scores)
         // checkScores(scores);
 
     }
-    Console.WriteLine("Grade : "+grade);
+    Console.WriteLine("Grade : " + grade);
 }
 
-// Loops for, foreach, while
+// Loops for, foreach, whi le
 // for loop
 int length = 5;
 for (
